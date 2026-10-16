@@ -1,0 +1,44 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid 8f2c68a4-1234-4567-89ab-cdef01234567)
+
+  (paper "A4")
+
+  (title_block
+    (title "The Astronomy Files - Master System Schematic")
+    (company "The Astronomy Files Project")
+    (rev "v1.0")
+  )
+
+  (lib_symbols
+    (symbol "Device:R" (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "R" (id 0) (at 2.032 0 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "R" (id 1) (at 2.032 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (symbol "R_1_1"
+        (rectangle (start -1.016 2.54) (end 1.016 -2.54)
+          (stroke (width 0.254) (type solid) (color 0 0 0 0))
+          (fill (type none))
+        )
+        (pin passive line (at 0 3.81 270) (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -3.81 90) (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+  )
+
+  (wire (pts (xy 50 50) (xy 70 50)))
+
+  (text "The Astronomy Files - Pin Mapping Summary:\n\n1. Real-Time Clock (I2C Bus):\n  - DS3231 Pin 5 (SDA) -> ESP32-S3 GPIO 8 (Pull-up 4.7k to 3.3V)\n  - DS3231 Pin 6 (SCL) -> ESP32-S3 GPIO 9 (Pull-up 4.7k to 3.3V)\n\n2. E-Paper Screen (SPI Bus):\n  - DISP1 BUSY -> ESP32-S3 GPIO 4\n  - DISP1 RST  -> ESP32-S3 GPIO 5\n  - DISP1 D/C  -> ESP32-S3 GPIO 6\n  - DISP1 CS   -> ESP32-S3 GPIO 7\n  - DISP1 SCLK -> ESP32-S3 GPIO 12\n  - DISP1 DIN  -> ESP32-S3 GPIO 11\n\n3. Power & Battery Management:\n  - TP4056 Battery Charger & AP2112K 3.3V LDO Regulator" 
+    (at 25 30 0)
+    (effects (font (size 2.5 2.5)) (justify left top))
+  )
+)
