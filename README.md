@@ -28,3 +28,6 @@ Slim profile battery packed under the PCB board inside the pocket case.
 <img width="1706" height="909" alt="Screenshot 2026-10-23 at 11 39 25" src="https://github.com/user-attachments/assets/3a74cfae-4827-470c-ae70-0e8580a8fd49" />
 
 
+The Astronomy Files operates as an ultra-low-power, standalone astronomical companion by leveraging the dual-core processing and Wi-Fi/Bluetooth capabilities of the ESP32-S3-MINI-1 to calculate real-time celestial coordinates, lunar phases, and target visibility.
+To achieve extreme energy efficiency for long field sessions, the system utilizes a high-precision DS3231 RTC for accurate timekeeping while the main microcontroller enters deep sleep, waking only at defined intervals to pull precise satellite/time data and update the 1.54-inch E-Paper display.
+Onboard power management—driven by an AP2112K 3.3V LDO regulator and an integrated TP4056 LiPo charging circuit—ensures stable, continuous operation from a 3.7V battery source while maintaining full visibility under direct sunlight with zero static power draw from the screen.
